@@ -1,0 +1,75 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_STACK_OVERFLOW (0xc00000fd) at pc=0x00007ffca22dd0e0, pid=23740, tid=0x0000000000007e9c
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_411) (build 1.8.0_411-b09)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.411-b09 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x21d0e0]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000021c54b7c800):  JavaThread "JMX server connection timeout 147" daemon [_thread_in_vm, id=32412, stack(0x000000ace0700000,0x000000ace0800000)]
+
+siginfo: ExceptionCode=0xc00000fd, ExceptionInformation=0x0000000000000001 0x000000ace07fe6a0 
+
+Registers:
+RAX=0x0000000000000002, RBX=0x0000000000000002, RCX=0x000000ace07fe6a0, RDX=0x0000000000001000
+RSP=0x000000ace07ff6a0, RBP=0x000000ace07ff7a0, RSI=0x0000000000000002, RDI=0x0000021c4b93da00
+R8 =0x0000000000000005, R9 =0x0000000000000006, R10=0x0000021c54b97e60, R11=0x0000021c4b93da00
+R12=0x0000021c5075ddc0, R13=0x000000ace07ff9b0, R14=0x000000ace07ff6a0, R15=0x000000ace07ffa80
+RIP=0x00007ffca22dd0e0, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x000000ace07ff6a0)
+0x000000ace07ff6a0:   0000021c54b7c800 0000000000000001
+0x000000ace07ff6b0:   0000021c4b93da00 00007ffca218c54b
+0x000000ace07ff6c0:   0000021c4b93da00 0000021c54b7c800
+0x000000ace07ff6d0:   0000000000000000 000000acda0b97ee
+0x000000ace07ff6e0:   0000000ac0006a00 0000021c4b93da00
+0x000000ace07ff6f0:   0000021c54b7c800 00000007c0006a20
+0x000000ace07ff700:   0000000000000001 0000000000000000
+0x000000ace07ff710:   0000021c4b93da00 0000000000000001
+0x000000ace07ff720:   0000000000000006 0000021c54b7c800
+0x000000ace07ff730:   0000021c4b93da00 0000021c54b7c800
+0x000000ace07ff740:   0000021c33584a60 0000021c54b7c800
+0x000000ace07ff750:   0000021c54b7c800 0000021c4b93da00
+0x000000ace07ff760:   0000021c54b7c800 0000000000000006
+0x000000ace07ff770:   00000007c0006a20 00007ffca2192b9b
+0x000000ace07ff780:   00000007c0006a20 000000ace07ff7e1
+0x000000ace07ff790:   0000021c4b93da00 0000000000000000 
+
+Instructions: (pc=0x00007ffca22dd0e0)
+0x00007ffca22dd0c0:   f0 7c 33 48 8b de e8 25 39 09 00 48 63 d0 ff c6
+0x00007ffca22dd0d0:   48 0f af d3 49 8b ce 48 63 c6 48 2b ca 48 ff c3
+0x00007ffca22dd0e0:   c7 01 00 00 00 00 48 3b 05 03 c9 59 00 7e d7 48
+0x00007ffca22dd0f0:   8b 9d e8 00 00 00 48 8d 54 24 48 48 8d 4d 40 e8 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000002 is an unknown value
+RBX=0x0000000000000002 is an unknown value
+RCX=0x000000ace07fe6a0 is pointing into the stack for thread: 0x0000021c54b7c800
+RDX=0x0000000000001000 is an unknown value
+RSP=0x000000ace07ff6a0 is pointing into the stack for thread: 0x0000021c54b7c800
+RBP=0x000000ace07ff7a0 is pointing into the stack for thread: 0x0000021c54b7c800
+RSI=0x0000000000000002 is an unknown value
+RDI={method} {0x0000021c4b93da08} 'run' '()V' in 'java/lang/Thread'
+R8 =0x0000000000000005 is an unknown value
+R9 =0x0000000000000006 is an unknown value
+R10=0x0000021c54b97e60 is an unknown value
+R11={method} {0x0000021c4b93da08} 'run' '()V' in 'java/lang/Thread'
+R12=0x0000021c5075ddc0 is an unknown value
+R13=0x000000ace07ff9b0 is pointing into the stack for thread: 0x0000021c54b7c800
+R14=0x000000ace07ff6a0 is pointing into the stack for thread: 0x0000021c54b7c800
+R15=0x000000ace07ffa80 is pointing into the stack for thread: 0x0000021c54b7c800
+
+
+Stack: [0x000000ace0700000,0x000000ace0800000],  sp=0x000000ace07ff6a0,  free space=1021k
